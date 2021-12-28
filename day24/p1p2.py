@@ -40,7 +40,7 @@ def searchFromBestGuess(num, p2):
     cnt = 0
     lst = 0
     n = int(num)
-    for i in range(n, 0 if p2 else 52000000000000, -1 if p2 else 1):
+    for i in range(n, 0 if p2 else 99999999999999, -1 if p2 else 1):
         s = str(i)
         if "0" in s:
             continue
