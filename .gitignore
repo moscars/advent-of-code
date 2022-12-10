@@ -3,6 +3,15 @@ __pycache__/
 *.py[cod]
 *$py.class
 .DS_Store
+template.py
+book.py
+e
+i
+i.txt
+p.py
+short.py
+input.in
+input.txt
 
 # C extensions
 *.so
