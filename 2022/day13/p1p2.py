@@ -1,4 +1,3 @@
-import ast
 import functools
 
 groups = open(0).read().split('\n\n')
@@ -23,15 +22,15 @@ def comp(l1, l2):
 
     return comp(len(l1), len(l2))
 
-correctOrder = []
+p1 = 0
 packets = []
 
 packets.append([[2]])
 packets.append([[6]])
 for i, group in enumerate(groups):
-    l1, l2 = map(ast.literal_eval, group.split('\n'))
+    l1, l2 = map(eval, group.split('\n'))
     if comp(l1, l2) == -1:
-        correctOrder.append(i + 1)
+        p1 += i + 1
     packets.append(l1)
     packets.append(l2)
 
@@ -41,5 +40,5 @@ p2 = 1
 for i in range(len(packets)):
     if packets[i] in [[[2]], [[6]]]:
         p2 *= (i + 1)
-print(sum(correctOrder))
+print(p1)
 print(p2)
