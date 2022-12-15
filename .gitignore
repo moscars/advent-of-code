@@ -12,6 +12,8 @@ p.py
 short.py
 input.in
 input.txt
+a.out
+a.out.dSym
 
 # C extensions
 *.so
