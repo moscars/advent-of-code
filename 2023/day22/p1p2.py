@@ -34,13 +34,11 @@ class Brick:
 
 bricks = []
 occupied = set()
-maMI = 0
 for line in lines:
     x1, y1, z1, x2, y2, z2 = map(int, line.replace('~', ',').split(','))
     b = Brick(x1, y1, z1, x2, y2, z2)
     bricks.append(b)
     occupied |= b.getLocation()
-    maMI = max(maMI, min(z1, z2))
 
 def fall(brickRem, occupied, bricks):
     occu2 = deepcopy(occupied)
